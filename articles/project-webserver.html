@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../favicon.png">
+    <title>Wito De Neve - webserver</title>
+  </head>
+  <body>
+    <a href="../index.html" class="back-button">← Back</a>
+    <header>
+      <h1>Wito De Neve</h1>
+      <p> 
+        <a href="https://www.linkedin.com/in/wito-de-neve-672149268/" target="_blank">LinkedIn</a> |
+        <a href="../resume.pdf" target="_blank">Resume</a> |
+        <span id="email">
+      </p>
+    </header>
+
+    <div class="article">
+      <h1>Project: hosting my own website</h1>
+
+      <p>Recently I decided to step up my game and create my personal website. Aimed at introducing myself towards companies and interested people, I envisioned a clean and modern site. To give myself an extra challenge, I decided to host the site myself. Unbekownst to me, chaos was about to ensue.</p>
+
+      <h3>Calm before the storm</h3>
+      <p>I decided to buy myself a Raspberry Pi. A cheap microcontroller with networking capabilities seemed the perfect fit. But wait ... Didn't I have an old Macbook Air lying in one of my closets? Aha! Now I even didn't need to pay for hardware. I can just host my website on that old Macbook Air. Just install Debian on that <i>damn thang</i> and we're all set.</p>
+      <h3>The chaos</h3>
+      <p>I downloaded the ISO image, found an old USB stick, downloaded Balena-Etcher and I was on my way to create a bootable USB. <i>God darn it</i>, flash failed. The first part of the chaos. Okay, try it again. Still failed. Try another USB? Still failed. Reformat USB, reinstall Balena-Etcher? Still nothing. Eventually I just ditched Balena-Etcher altogheter. After trying - and failing - with Ubuntu's <i>Startup Disk Creator</i>, I found a terminal command, tried it, and it <i>magically</i> worked.</p>
+      <p>Okay, an hour wasted already, but let's just move on, we're almost there. I booted from the USB and followed the installer.
+      <i>"No Ethernet card detected. If you know the name of the driver needed by your Ethernet card, you can select it from the list."</i>
+      Uh-oh... I don't know what Ethernet card I have, and moments later I realised the one I should have wasn't even in the list. Let's just skip that part for now.
+      </p>
+      <p>After some waiting Debian was installed. But, of course, there was no internet connection. Installing packages is quite difficult without connection and hosting a website even impossible. I knew what I had to do, but I didn't know if I had the strength to do it. The difficult task ahead of me was to painstakingly download the driver packages and all its dependencies via one device onto a USB, mount the USB on the Macbook Air, and install the packages from that USB. Using apt-rdepends doing this seemed surprisingly easy. Or so it seemed. After the first try, a number of dependencies failed to install, ultimately resulting in the driver package failing to install.
+      What followed was a tedious fight against a dependency hell. Numerous trips of my USB From my laptop to the Macbook Air and working on a system that even didn't have vim, but vi. Those were the consequences of choosing to host a website on a Debian installation on a Macbook Air.
+      </p>
+
+      <h3>After rain comes sunshine</h3>
+      <img src="macbook-air.jpg" alt="The dusty, old Macbook Air in question" width=700>
+      <p>Hours were wasted in that battle, but I prevailed. Triumph was ahead of me. Finally, I had an internet connection.
+      Nginx and cerbot were installed, and the rest is history. The result is a dusty and old - but more than capable - Macbook Air serving you this page. You're welcome.
+      </p>
+      <p><i>Update: the website is now no longer self-hosted, because my father unplugged the cable.</i><p>
+    </div>
+    <script type="text/javascript">
+      <!--
+      // Thanks to Joe Maller! ;)
+      // I adapted the script a bit, because I am even more paranoid.
+
+      // protected email script by Joe Maller
+      // JavaScripts available at http://www.joemaller.com
+      // this script is free to use and distribute
+      // but please credit me and/or link to my site
+
+      const email = atob('d2l0by5kZS5uZXZlQG1lLmNvbQ==')
+      document.getElementById('email').innerHTML = `<a href="mailto:${email}">${email}</a>`;
+    </script>
+
+    <noscript>
+      <em>Email address protected by JavaScript.<BR>
+        Please enable JavaScript to contact me.</em>
+    </noscript>
+
+  </body>
+</html>
+

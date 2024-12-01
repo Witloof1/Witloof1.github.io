@@ -1,0 +1,115 @@
+:root {
+  --bg: #153448;
+  --hover: #334E61;
+  --accent: #2C4556;
+  --text: #EEEEEE;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  padding: 20px;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+div {
+  margin: 20px 0px;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 20px 0px 0px 0px;
+}
+
+hr {
+  margin-top: 30px;
+}
+
+a {
+  padding: 10px;
+  color: #EEEEEE;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+a:hover {		
+  background-color: var(--hover);
+}
+
+img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0px;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.next-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-list {
+  max-width: 700px;
+  width: calc(100% - 20px);
+  margin: auto;
+}
+
+.card {
+  display: block;
+  background-color: var(--accent);
+  color: var(--text);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  background-color: var(--hover);
+  color: #EEEEEE;
+  transform: translateY(-5px);
+}
+
+.card-title {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1.5rem;
+}
+
+.card-preview {
+  margin: 0;
+}
+
+.article {
+  padding: 10px 10px;
+  max-width: 700px;
+  width: calc(100% - 20px);
+  margin: auto;
+}

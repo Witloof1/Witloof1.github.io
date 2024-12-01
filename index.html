@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/jpg" href="favicon.png">
+    <title>Wito De Neve</title>
+  </head>
+  <body>
+    <header>
+      <h1>Wito De Neve</h1>
+      <p>
+        <a href="https://www.linkedin.com/in/wito-de-neve-672149268/" target="_blank">LinkedIn</a> |
+        <a href="resume.pdf" target="_blank">Resume</a> |
+        <span id="email">
+      </p>
+    </header>
+
+    <div class="article">
+      <p>Hi! I am Wito and welcome to my site. Here you can learn a little bit about who I am and what I do. Feel free to check my LinkedIn, resume or email me, or read some of the blog posts below.</p>
+      <hr>
+    </div>
+
+    <div class="card-list">
+      <div>
+        <a href="/articles/project-webserver.html" class="card">
+          <h3 class="card-title">Project: hosting my own website</h3>
+          <p class="card-preview">Recently I decided to step up my game and create my personal website. Aimed at introducing myself towards companies and interested people, I envisioned a clean and modern site. To give myself an extra challenge, I decided to host the site myself. Unbekownst to me, chaos was about to ensue.</p>
+        </a>
+      </div>
+
+      <div>
+        <a href="/articles/heroes.html" class="card">
+          <h3 class="card-title">My Computer Science Heroes</h3>
+          <p class="card-preview">Over the course of my life, numerous people have influenced me and taught me valuable lessons—lessons that might teach you something too!</p>
+        </a>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    <!--
+    // Thanks to Joe Maller! ;)
+    // I adapted the script a bit, because I am even more paranoid.
+
+    // protected email script by Joe Maller
+    // JavaScripts available at http://www.joemaller.com
+    // this script is free to use and distribute
+    // but please credit me and/or link to my site
+
+    const email = atob('d2l0by5kZS5uZXZlQG1lLmNvbQ==')
+    document.getElementById('email').innerHTML = `<a href="mailto:${email}">${email}</a>`;
+  </script>
+
+  <noscript>
+    <em>Email address protected by JavaScript.<BR>
+      Please enable JavaScript to contact me.</em>
+  </noscript>
+</html>
+
